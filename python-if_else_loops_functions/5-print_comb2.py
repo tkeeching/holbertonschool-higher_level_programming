@@ -2,6 +2,6 @@
 for i in range(0, 100):
     num = str(i).zfill(2)
     if i == 99:
-        print("{0}".format(num), end="")
+        print("{0}".format(num))
     else:
         print("{0}".format(num), end=", ")
