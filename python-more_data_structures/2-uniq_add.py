@@ -8,10 +8,10 @@ def uniq_add(my_list=[]):
             new_list.append(my_list[i])
         else:
             new_list.append(my_list[i])
-    
+
     for j in range(len(new_list)):
         result += new_list[j]
-    
+
     return result
 
 
