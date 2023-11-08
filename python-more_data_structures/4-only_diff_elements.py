@@ -10,7 +10,7 @@ def only_diff_elements(set_1, set_2):
 
     for k in common_list:
         new_list.remove(k)
-          
+
     return new_list
 
 
