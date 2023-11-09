@@ -2,8 +2,8 @@
 def best_score(a_dictionary):
     biggest_int = 0
     name_with_biggest_int = ""
-    if (a_dictionary is None):
-      return None
+    if (a_dictionary is None or len(a_dictionary) == 0):
+        return None
     for k, v in a_dictionary.items():
         if (v > biggest_int):
             biggest_int = v
@@ -17,4 +17,7 @@ def best_score(a_dictionary):
 # print("Best score: {}".format(best_key))
 
 # best_key = best_score(None)
+# print("Best score: {}".format(best_key))
+
+# best_key = best_score({})
 # print("Best score: {}".format(best_key))
