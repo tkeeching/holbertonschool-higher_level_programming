@@ -14,7 +14,7 @@ def safe_print_list(my_list=[], x=0):
 
 
 # Tests
-# my_list = [1, 2, 3, 4, 5]
+# my_list = [4, 3, 2, 2, 1]
 # my_list = [1, 2, 3, 4]
 
 # nb_print = safe_print_list(my_list, 2)
