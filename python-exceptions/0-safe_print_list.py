@@ -11,6 +11,7 @@ def safe_print_list(my_list=[], x=0):
         except:
             nb_print -= 1
             print("")
+            return nb_print
     return nb_print
 
 
