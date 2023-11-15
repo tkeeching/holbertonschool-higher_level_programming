@@ -67,10 +67,10 @@ class Rectangle:
 
         for i in range(self.__height):
             for j in range(self.__width):
-                if (j == self.__width - 1):
-                    result += "#\n"
+                if (i != self.__height - 1 and j == self.__width - 1):
+                    result += "j\n"
                 else:
-                    result += "#"
+                    result += "i"
         return result
 
 
@@ -92,6 +92,6 @@ class Rectangle:
 # print("--")
 
 # my_rectangle.width = 0
-# my_rectangle.height = 3
+# my_rectangle.height = 4
 # print(my_rectangle)
 # print(repr(my_rectangle))
