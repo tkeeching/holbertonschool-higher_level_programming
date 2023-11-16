@@ -12,6 +12,7 @@ class Rectangle:
         self.__width(width)
         self.__height(height)
         Rectangle.number_of_instances += 1
+        Rectangle.print_symbol = "#"
 
     # Setters
     def __width(self, value):
@@ -91,11 +92,9 @@ class Rectangle:
     def __setattr__(self, name, value):
         """Handle different print_symbol type"""
 
-        if (type(value) is int):
+        if (name != "print_symbol" and type(value) is int):
             self.__dict__[name] = value
-        elif (type(value) is str):
-            Rectangle.print_symbol = value
-        elif (type(value) is list):
+        else:
             Rectangle.print_symbol = f"{value}"
 
 
@@ -123,3 +122,15 @@ class Rectangle:
 # print(my_rectangle_3)
 
 # print("--")
+
+# myrectangle_1 = Rectangle(8, 4)
+# myrectangle_1.print_symbol = 89
+# print(myrectangle_1)
+
+# myrectangle1 = Rectangle(8, 4)
+# print(myrectangle1)
+# myrectangle1.printsymbol = "H"
+# print(myrectangle1)
+
+# myrectangle2 = Rectangle(2, 1)
+# print(myrectangle2)
