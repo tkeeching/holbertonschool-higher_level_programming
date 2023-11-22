@@ -12,7 +12,6 @@ class Rectangle:
         self.__width(width)
         self.__height(height)
         Rectangle.number_of_instances += 1
-        Rectangle.print_symbol = "#"
 
     # Setters
     def __width(self, value):
@@ -123,8 +122,8 @@ class Rectangle:
 
 # print("--")
 
+# Rectangle.print_symbol = "C"
 # myrectangle_1 = Rectangle(8, 4)
-# myrectangle_1.print_symbol = 89
 # print(myrectangle_1)
 
 # myrectangle1 = Rectangle(8, 4)
