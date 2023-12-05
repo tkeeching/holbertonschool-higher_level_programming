@@ -2,7 +2,6 @@
 def copy_list(a_list):
     return list(a_list)
 
-
 # Tests
 # my_list = [1, 2, 3]
 # print(my_list)
