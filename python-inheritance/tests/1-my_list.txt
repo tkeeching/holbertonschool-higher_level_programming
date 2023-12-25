@@ -1,9 +1,22 @@
-my_list = MyList()
-my_list.append(1)
-my_list.append(4)
-my_list.append(2)
-my_list.append(3)
-my_list.append(5)
-print(my_list)
-my_list.print_sorted()
-print(my_list)
+The ``MyList`` module
+======================
+
+Using ``MyList``
+-------------------
+
+
+First import ``print_sorted`` from the ``1-my_list`` file:
+
+    >>> ps = __import__('1-my_list').MyList.print_sorted
+
+Tests:
+
+    Test - check that sorting works
+    >>> ps([1, 4, 2, 3, 5])
+    [1, 2, 3, 4, 5]
+
+    Test - list contains non-integer values (string)
+    >>> ps(["haha", 2, 1])
+    Traceback (most recent call last):
+    ...
+    TypeError: '<' not supported between instances of 'int' and 'str'
