@@ -5,8 +5,9 @@ Using ``MyList``
 -------------------
 
 
-First import ``print_sorted`` from the ``1-my_list`` file:
+First import ``MyList`` and ``print_sorted`` from the ``1-my_list`` file:
 
+    >>> MyList = __import__('1-my_list').MyList
     >>> ps = __import__('1-my_list').MyList.print_sorted
 
 Tests:
@@ -20,3 +21,22 @@ Tests:
     Traceback (most recent call last):
     ...
     TypeError: '<' not supported between instances of 'int' and 'str'
+
+    Test - check instantiation
+    >>> isinstance(MyList(), MyList)
+    True
+
+    Test - check inherits from list
+    >>> issubclass(MyList, list)
+    True
+
+    Test - check __str__
+    >>> MyList().__str__()
+    '[]'
+
+    Test - check append()
+    >>> my_list = MyList()
+    >>> my_list.append(1)
+    >>> my_list.append(2)
+    >>> print(my_list)
+    [1, 2]
