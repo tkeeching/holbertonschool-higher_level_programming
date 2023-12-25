@@ -45,7 +45,9 @@ Tests:
     >>> ps([])
     []
 
-    Test - check ``print_sorted()`` with empty list
+    Test - check ``print_sorted()`` returns a new list
     >>> my_list_a = [1, 3, 4, 2]
-    >>> ps(my_list_a)
+    >>> my_list_b = ps(my_list_a)
     [1, 2, 3, 4]
+    >>> id(my_list_a) != id(my_list_b)
+    True
