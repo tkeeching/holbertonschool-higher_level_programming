@@ -4,9 +4,9 @@
 
 def is_same_class(obj, a_class):
     """Returns True if obj is of instance a_class, otherwise returns False."""
-    if (isinstance(obj, bool) or isinstance(obj, type(None))):
+    if (type(obj) is bool or type(obj) is None):
         return False
-    elif (isinstance(obj, a_class)):
+    elif (type(obj) is a_class):
         return True
     else:
         return False
@@ -27,3 +27,7 @@ def is_same_class(obj, a_class):
 # a = None
 # print(is_same_class(a, object))
 # print(type(None))
+# a = [1,2,3]
+# print("{} is an instance of {}".format(a, type(a)))
+# print(is_same_class(a, list))
+# print(is_same_class(a, object))
