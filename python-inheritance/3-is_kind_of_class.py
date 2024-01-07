@@ -8,7 +8,7 @@ def is_kind_of_class(obj, a_class):
     if the object is an instance of a class that inherited
     from, otherwise returns False.
     """
-    if (type(obj) is bool or type(obj) is None):
+    if (type(obj) is None):
         return False
     elif (isinstance(obj, a_class)):
         return True
@@ -22,5 +22,10 @@ def is_kind_of_class(obj, a_class):
 #     print("{} comes from {}".format(a, int.__name__))
 # if is_kind_of_class(a, float):
 #     print("{} comes from {}".format(a, float.__name__))
+# if is_kind_of_class(a, object):
+#     print("{} comes from {}".format(a, object.__name__))
+# a = True
+# if is_kind_of_class(a, int):
+#     print("{} comes from {}".format(a, int.__name__))
 # if is_kind_of_class(a, object):
 #     print("{} comes from {}".format(a, object.__name__))
