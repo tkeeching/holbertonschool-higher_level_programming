@@ -1,18 +1,5 @@
 #!/usr/bin/python3
-"""Base module"""
-
-
-class Base():
-    """Base class"""
-    __nb_objects = 0
-
-    def __init__(self, id=None):
-        if (id is not None):
-            self.id = id
-        else:
-            Base.__nb_objects += 1
-            self.id = Base.__nb_objects
-
+from base import Base
 
 """Rectangle module"""
 
@@ -71,9 +58,12 @@ class Rectangle(Base):
 # Tests
 # r1 = Rectangle(10, 2)
 # print(r1.id)
+# print(r1.width())
 
 # r2 = Rectangle(2, 10)
 # print(r2.id)
 
 # r3 = Rectangle(10, 2, 0, 0, 12)
 # print(r3.id)
+
+# print(issubclass(Rectangle, Base))
