@@ -28,36 +28,52 @@ class Rectangle(Base):
         self._y(y)
 
     def _width(self, width):
+        """width setter"""
+
         self.__width = width
 
     def width(self):
+        """width getter"""
+
         return self.__width
 
     def _height(self, height):
+        """height setter"""
+
         self.__height = height
 
     def height(self):
+        """height getter"""
+
         return self.__height
 
     def _x(self, x):
+        """x setter"""
+
         self.__x = x
 
     def x(self):
+        """x getter"""
+
         return self.__x
 
     def _y(self, y):
+        """y setter"""
+
         self.__y = y
 
     def y(self):
+        """y getter"""
+
         return self.__y
 
 
 # Tests
-# r1 = Rectangle(10, 2)
-# print(r1.id)
+r1 = Rectangle(10, 2)
+print(r1.id)
 
-# r2 = Rectangle(2, 10)
-# print(r2.id)
+r2 = Rectangle(2, 10)
+print(r2.id)
 
-# r3 = Rectangle(10, 2, 0, 0, 12)
-# print(r3.id)
+r3 = Rectangle(10, 2, 0, 0, 12)
+print(r3.id)
