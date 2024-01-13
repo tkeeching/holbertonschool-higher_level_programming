@@ -30,15 +30,6 @@ class Rectangle(BaseGeometry):
         if self.integer_validator("height", height) is None:
             self.__height = height
 
-    def area(self):
-        raise Exception('area() is not implemented')
-
-    def integer_validator(self, name, value):
-        if (type(value) is not int):
-            raise TypeError("{0} must be an integer".format(name))
-        if (value <= 0):
-            raise ValueError("{0} must be greater than 0".format(name))
-
 
 # Tests
 # r = Rectangle(3, 5)
