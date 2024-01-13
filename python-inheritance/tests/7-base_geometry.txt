@@ -1,0 +1,31 @@
+The ``BaseGeometry`` module
+======================
+
+Using ``BaseGeometry``
+-------------------
+
+
+First import ``BaseGeometry`` and ``integer_validator`` from the ``7-base_geometry`` file:
+
+    >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+    >>> integer_validator = __import__('7-base_geometry').BaseGeometry.integer_validator
+
+Tests:
+
+    Test - check ``integer_validator`` returns TypeError
+    >>> integer_validator(BaseGeometry, "name", "John")
+    Traceback (most recent call last):
+    ...
+    TypeError: name must be an integer
+
+    Test - check ``integer_validator`` returns ValueError
+    >>> integer_validator(BaseGeometry, "age", 0)
+    Traceback (most recent call last):
+    ...
+    ValueError: age must be greater than 0
+
+    Test - check ``integer_validator`` returns ValueError
+    >>> integer_validator(BaseGeometry, "distance", -4)
+    Traceback (most recent call last):
+    ...
+    ValueError: distance must be greater than 0
