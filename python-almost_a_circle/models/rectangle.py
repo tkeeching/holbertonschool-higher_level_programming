@@ -78,6 +78,14 @@ class Rectangle(Base):
 
         return self.__width * self.__height
 
+    def display(self):
+        """Prints rectangle instance with the character #"""
+
+        for i in range(self.__height):
+            for j in range(self.__width):
+                print("#", end="")
+            print("")
+
 # Tests
 # r1 = Rectangle(10, 2)
 # print(r1.id)
@@ -123,3 +131,12 @@ class Rectangle(Base):
 
 # r3 = Rectangle(8, 7, 0, 0, 12)
 # print(r3.area())
+
+# Task 5 Tests
+# r1 = Rectangle(4, 6)
+# r1.display()
+
+# print("---")
+
+# r1 = Rectangle(2, 2)
+# r1.display()
