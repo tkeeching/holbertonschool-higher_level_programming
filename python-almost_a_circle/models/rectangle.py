@@ -62,6 +62,8 @@ class Rectangle(Base):
     y = property(y, __y)
 
     def validator(self, name, value):
+        """Validates attribute"""
+
         if (type(value) is not int):
             raise TypeError("{} must be an integer".format(name))
         elif ((name == "x" or name == "y") and value < 0):
