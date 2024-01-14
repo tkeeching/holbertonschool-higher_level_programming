@@ -71,6 +71,11 @@ class Rectangle(Base):
         else:
             return value
 
+    def area(self):
+        """Returns the area of the rectangle"""
+
+        return self.__width * self.__height
+
 # Tests
 # r1 = Rectangle(10, 2)
 # print(r1.id)
@@ -106,3 +111,13 @@ class Rectangle(Base):
 #     Rectangle(10, 2, 3, -1)
 # except Exception as e:
 #     print("[{}] {}".format(e.__class__.__name__, e))
+
+# Task 4 Tests
+# r1 = Rectangle(3, 2)
+# print(r1.area())
+
+# r2 = Rectangle(2, 10)
+# print(r2.area())
+
+# r3 = Rectangle(8, 7, 0, 0, 12)
+# print(r3.area())
