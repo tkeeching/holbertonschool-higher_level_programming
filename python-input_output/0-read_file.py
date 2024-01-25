@@ -5,7 +5,7 @@ def read_file(filename=""):
     """Prints content of a file"""
 
     with open(filename, encoding="utf-8") as f:
-        print(f.read())
+        print(f.read(), end="")
  
-# # Tests
+# # # Tests
 # read_file("my_file_0.txt")
