@@ -46,3 +46,6 @@ class Rectangle(BaseGeometry):
 #     r2 = Rectangle(4, True)
 # except Exception as e:
 #     print("[{}] {}".format(e.__class__.__name__, e))
+
+# r = Rectangle(3, 5)
+# print(issubclass(Rectangle, BaseGeometry))
