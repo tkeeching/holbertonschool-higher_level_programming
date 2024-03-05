@@ -40,6 +40,8 @@ class Rectangle(Base):
     height = property(height, __height)
 
     def update(self, *args):
+        """Attributes setter"""
+
         if (args.__len__() > 0):
             self.id = args[0]
 
