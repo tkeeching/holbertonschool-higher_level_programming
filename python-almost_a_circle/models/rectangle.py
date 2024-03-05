@@ -39,6 +39,22 @@ class Rectangle(Base):
 
     height = property(height, __height)
 
+    def update(self, *args):
+        if (args.__len__() > 0):
+            self.id = args[0]
+
+        if (args.__len__() > 1):
+            self.__width = args[1]
+
+        if (args.__len__() > 2):
+            self.__height = args[2]
+
+        if (args.__len__() > 3):
+            self.__x = args[3]
+
+        if (args.__len__() > 4):
+            self.__y = args[4]
+
     def __x(self, x):
         """x setter"""
         self.__x = self.validator("x", x)
@@ -185,3 +201,22 @@ class Rectangle(Base):
 
 # r2 = Rectangle(10, 12, 2, 3)
 # r2.display()
+
+# Task 8 tests
+# r1 = Rectangle(10, 10, 10, 10)
+# print(r1)
+
+# r1.update(89)
+# print(r1)
+
+# r1.update(89, 2)
+# print(r1)
+
+# r1.update(89, 2, 3)
+# print(r1)
+
+# r1.update(89, 2, 3, 4)
+# print(r1)
+
+# r1.update(89, 2, 3, 4, 5)
+# print(r1)
