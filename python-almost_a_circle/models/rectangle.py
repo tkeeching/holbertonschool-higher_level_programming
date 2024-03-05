@@ -82,10 +82,22 @@ class Rectangle(Base):
     def display(self):
         """Prints rectangle instance with the character #"""
 
-        for i in range(self.__height):
-            for j in range(self.__width):
-                print("#", end="")
-            print("")
+        if (self.__y) > 0:
+            for m in range(self.__y):
+                print("")
+            for i in range(self.__height):
+                for n in range(self.__x):
+                    print(" ", end="")
+                for j in range(self.__width):
+                    print("#", end="")
+                print("")
+        else:
+            for i in range(self.__height):
+                for n in range(self.__x):
+                    print(" ", end="")
+                for j in range(self.__width):
+                    print("#", end="")
+                print("")
 
     def __str__(self):
         """Override string representation of the rectangle"""
@@ -154,7 +166,7 @@ class Rectangle(Base):
 
 # r2 = Rectangle(5, 5, 1)
 # print(r2)
-    
+
 # Task 7 tests
 # r1 = Rectangle(2, 3, 2, 2)
 # r1.display()
@@ -162,4 +174,14 @@ class Rectangle(Base):
 # print("---")
 
 # r2 = Rectangle(3, 2, 1, 0)
+# r2.display()
+
+# print("---")
+
+# r2 = Rectangle(10, 12, 1, 0)
+# r2.display()
+
+# print("---")
+
+# r2 = Rectangle(10, 12, 2, 3)
 # r2.display()
