@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 """Rectangle module"""
 
-from models.base import Base
+from models.base import Base # for checker
+# from base import Base # for local
 
 
 class Rectangle(Base):
@@ -153,3 +154,12 @@ class Rectangle(Base):
 
 # r2 = Rectangle(5, 5, 1)
 # print(r2)
+    
+# Task 7 tests
+# r1 = Rectangle(2, 3, 2, 2)
+# r1.display()
+
+# print("---")
+
+# r2 = Rectangle(3, 2, 1, 0)
+# r2.display()
