@@ -42,20 +42,10 @@ class Rectangle(Base):
     def update(self, *args):
         """Attributes setter"""
 
-        if (args.__len__() > 0):
-            self.id = args[0]
+        attributes = ['id', 'width', 'height', 'x', 'y']
 
-        if (args.__len__() > 1):
-            self.__width = args[1]
-
-        if (args.__len__() > 2):
-            self.__height = args[2]
-
-        if (args.__len__() > 3):
-            self.__x = args[3]
-
-        if (args.__len__() > 4):
-            self.__y = args[4]
+        for i, arg in enumerate(args):
+            setattr(self, attributes[i], arg)
 
     def __x(self, x):
         """x setter"""
