@@ -39,13 +39,17 @@ class Rectangle(Base):
 
     height = property(height, __height)
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """Attributes setter"""
 
-        attributes = ['id', 'width', 'height', 'x', 'y']
+        if (len(args) > 0):
+            attributes = ['id', 'width', 'height', 'x', 'y']
 
-        for i, arg in enumerate(args):
-            setattr(self, attributes[i], arg)
+            for i, arg in enumerate(args):
+                setattr(self, attributes[i], arg)
+        else:
+            for attribute in kwargs:
+                setattr(self, attribute, kwargs[attribute])
 
     def __x(self, x):
         """x setter"""
@@ -211,4 +215,20 @@ class Rectangle(Base):
 # print(r1)
 
 # r1.update(89, 2, 3, 4, 5)
+# print(r1)
+
+# Task 9 tests
+# r1 = Rectangle(10, 10, 10, 10)
+# print(r1)
+
+# r1.update(height=1)
+# print(r1)
+
+# r1.update(width=1, x=2)
+# print(r1)
+
+# r1.update(y=1, width=2, x=3, id=89)
+# print(r1)
+
+# r1.update(x=1, height=2, y=3, width=4)
 # print(r1)
