@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """Rectangle module"""
 
-from models.base import Base # for checker
-# from base import Base # for local
+from models.base import Base  # for checker
+# from base import Base  # for local
 
 
 class Rectangle(Base):
