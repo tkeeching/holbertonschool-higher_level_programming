@@ -37,6 +37,15 @@ class Base():
         with open("{}.json".format(cls.__name__), "w") as file:
             file.write(Base.to_json_string(result))
 
+    @staticmethod
+    def from_json_string(json_string):
+        """returns the list of the JSON string representation"""
+
+        if (json_string is None or len(json_string) == 0):
+            return []
+        else:
+            return json.loads(json_string)
+
 # Tests
 # if __name__ == "__main__":
 
