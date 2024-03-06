@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """Square module"""
 
-from models.rectangle import Rectangle  # for checker
-# from rectangle import Rectangle  # for local
+# from models.rectangle import Rectangle  # for checker
+from rectangle import Rectangle  # for local
 
 
 class Square(Rectangle):
@@ -23,6 +23,18 @@ class Square(Rectangle):
         return self.width
 
     size = property(size, __size)
+
+    def update(self, *args, **kwargs):
+        """Attributes setter"""
+
+        if (len(args) > 0):
+            attributes = ['id', 'size', 'x', 'y']
+
+            for i, arg in enumerate(args):
+                setattr(self, attributes[i], arg)
+        else:
+            for attribute in kwargs:
+                setattr(self, attribute, kwargs[attribute])
 
     def __str__(self):
         """Override string representation of the square"""
@@ -63,3 +75,28 @@ class Square(Rectangle):
 #     s1.size = "9"
 # except Exception as e:
 #     print("[{}] {}".format(e.__class__.__name__, e))
+
+# Task 12
+# s1 = Square(5)
+# print(s1)
+
+# s1.update(10)
+# print(s1)
+
+# s1.update(1, 2)
+# print(s1)
+
+# s1.update(1, 2, 3)
+# print(s1)
+
+# s1.update(1, 2, 3, 4)
+# print(s1)
+
+# s1.update(x=12)
+# print(s1)
+
+# s1.update(size=7, y=1)
+# print(s1)
+
+# s1.update(size=7, id=89, y=1)
+# print(s1)
