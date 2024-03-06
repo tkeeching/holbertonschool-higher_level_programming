@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """Square module"""
 
-# from models.rectangle import Rectangle  # for checker
-from rectangle import Rectangle  # for local
+from models.rectangle import Rectangle  # for checker
+# from rectangle import Rectangle  # for local
 
 
 class Square(Rectangle):
