@@ -11,6 +11,19 @@ class Square(Rectangle):
     def __init__(self, size, x=0, y=0, id=None):
         super().__init__(size, size, x, y, id)
 
+    def __size(self, size):
+        """Size setter"""
+
+        self.width = self.validator("width", size)
+        self.height = self.validator("height", size)
+
+    def size(self):
+        """Size getter"""
+
+        return self.width
+
+    size = property(size, __size)
+
     def __str__(self):
         """Override string representation of the square"""
 
@@ -37,3 +50,16 @@ class Square(Rectangle):
 # print(s3)
 # print(s3.area())
 # s3.display()
+
+
+# Task 11
+# s1 = Square(5)
+# print(s1)
+# print(s1.size)
+# s1.size = 10
+# print(s1)
+
+# try:
+#     s1.size = "9"
+# except Exception as e:
+#     print("[{}] {}".format(e.__class__.__name__, e))
