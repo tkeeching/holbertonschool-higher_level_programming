@@ -120,7 +120,8 @@ class Rectangle(Base):
     def to_dictionary(self):
         """Returns dictionary representation of the rectangle"""
 
-        return self.__dict__
+        return {key.replace('_Rectangle__', ''): value for key, value in
+                self.__dict__.items()}
 
 # Tests
 # r1 = Rectangle(10, 2)
@@ -237,6 +238,7 @@ class Rectangle(Base):
 
 # r1.update(x=1, height=2, y=3, width=4)
 # print(r1)
+
 
 # Task 13
 # r1 = Rectangle(10, 2, 1, 9)
