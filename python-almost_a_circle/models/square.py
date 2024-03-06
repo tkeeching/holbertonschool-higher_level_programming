@@ -42,6 +42,15 @@ class Square(Rectangle):
         return "[Square] ({}) {}/{} - {}".format(
             self.id, self.x, self.y, self.width)
 
+    def to_dictionary(self):
+        """Returns dictionary representation of the square"""
+
+        result = {key.replace('_Rectangle__', '').replace('width', 'size'):
+                  value for key, value in self.__dict__.items()}
+
+        del result['height']
+        return result
+
 # Tests
 # Task 10
 # s1 = Square(5)
@@ -100,3 +109,16 @@ class Square(Rectangle):
 
 # s1.update(size=7, id=89, y=1)
 # print(s1)
+
+# Task 14
+# s1 = Square(10, 2, 1)
+# print(s1)
+# s1_dictionary = s1.to_dictionary()
+# print(s1_dictionary)
+# print(type(s1_dictionary))
+
+# s2 = Square(1, 1)
+# print(s2)
+# s2.update(**s1_dictionary)
+# print(s2)
+# print(s1 == s2)
