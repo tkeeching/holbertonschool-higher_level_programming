@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Base module"""
 
+import json
 
 class Base():
     """Base class"""
@@ -20,7 +21,7 @@ class Base():
         if (list_dictionaries == None or len(list_dictionaries) == 0):
             return "[]"
         
-        return list_dictionaries.__str__()
+        return json.dumps(list_dictionaries)
 
 
 # Tests
