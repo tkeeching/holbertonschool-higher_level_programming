@@ -50,7 +50,11 @@ class Base():
     def create(cls, **dictionary):
         """Returns an instance with all attributes set"""
 
-        instance = cls(1, 1, 0)
+        if (cls.__name__ == 'Rectangle'):
+            instance = cls(1, 1, 0)
+        else:
+            instance = cls(1, 0, 0)
+
         instance.update(**dictionary)
 
         return instance
