@@ -45,7 +45,7 @@ class Base():
             return []
         else:
             return json.loads(json_string)
-        
+
     @classmethod
     def create(cls, **dictionary):
         """Returns an instance with all attributes set"""
@@ -58,7 +58,7 @@ class Base():
         instance.update(**dictionary)
 
         return instance
-        
+
 
 # Tests
 # if __name__ == "__main__":
