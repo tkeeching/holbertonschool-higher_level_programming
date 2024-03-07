@@ -37,6 +37,19 @@ class Base():
         with open("{}.json".format(cls.__name__), "w") as file:
             file.write(Base.to_json_string(result))
 
+    @classmethod
+    def load_from_file(cls):
+        """Reads a JSON file and returns a list of instances"""
+
+        with open("{}.json".format(cls.__name__), "r") as file:
+            content = file.read()
+
+        result = []
+        for item in Base.from_json_string(content):
+            result.append(cls.create(**item))
+
+        return result
+
     @staticmethod
     def from_json_string(json_string):
         """returns the list of the JSON string representation"""
