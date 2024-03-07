@@ -122,3 +122,7 @@ class Square(Rectangle):
 # s2.update(**s1_dictionary)
 # print(s2)
 # print(s1 == s2)
+
+# Task 18
+# s1 = Square.create(**{'size': 2})
+# print(s1)
