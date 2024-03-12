@@ -13,9 +13,9 @@ try:
         html_decoded = html.decode('utf8')
 
         print('Body response:')
-        print(' - type: {}'.format(type(html)))
-        print(' - content: {}'.format(html))
-        print(' - utf8 content: {}'.format(html_decoded))
+        print('{}{} {}'.format('\n', '- type:', type(html)))
+        print('{}{} {}'.format('\n', '- content:', html))
+        print('{}{} {}'.format('\n', '- utf8 content:', html_decoded))
 
 except urllib.error.HTTPError as error:
     print(error)
