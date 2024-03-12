@@ -13,9 +13,9 @@ with urllib.request.urlopen(req) as response:
     print('Body response:')
     print('         - type: {}'.format(type(html)))
 
-    start_index = html_decoded.find('OK') + len('OK')
+    start_index = html_decoded.find('<pre>') + len('<pre')
 
-    end_index = html_decoded.find('OK', start_index)
+    end_index = html_decoded.find('</pre>', start_index)
 
     if start_index != -1 and end_index != -1:
         message = html_decoded[start_index:end_index]
