@@ -12,23 +12,10 @@ try:
         html = response.read()
         html_decoded = html.decode('utf8')
 
-        print('html:', html)
-        print('html_decoded:', html_decoded)
-
         print('Body response:')
         print('         - type: {}'.format(type(html)))
+        print('         - content: {}'.format(html))
+        print('         - utf8 content: {}'.format(html_decoded))
 
-        start_index = html_decoded.find(
-            '<pre style="word-wrap: break-word; white-space: pre-wrap;">')
-        + len('<pre style="word-wrap: break-word; white-space: pre-wrap;">')
-
-        end_index = html_decoded.find('</pre>', start_index)
-
-        if start_index != -1 and end_index != -1:
-            message = html_decoded[start_index:end_index]
-            print('         - content: {}'.format(message))
-            print('         - utf8 content: {}'.format(message))
-        else:
-            print("Message not found.")
 except urllib.error.HTTPError as error:
     print(error)
