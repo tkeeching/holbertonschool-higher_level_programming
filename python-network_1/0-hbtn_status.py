@@ -11,17 +11,15 @@ with urllib.request.urlopen(req) as response:
     html_decoded = html.decode('utf8')
 
     print('Body response:')
-    print('    - type: {}'.format(type(html)))
+    print('         - type: {}'.format(type(html)))
 
-    start_index = html_decoded.find(
-            '<pre style="word-wrap: break-word; white-space: pre-wrap;">')
-    + len('<pre style="word-wrap: break-word; white-space: pre-wrap;">')
+    start_index = html_decoded.find('OK')
 
-    end_index = html_decoded.find('</pre>', start_index)
+    end_index = html_decoded.find('OK', start_index)
 
     if start_index != -1 and end_index != -1:
         message = html_decoded[start_index:end_index]
-        print('    - content: {}'.format(message))
-        print('    - utf8 content: {}'.format(message))
+        print('         - content: {}'.format(message))
+        print('         - utf8 content: {}'.format(message))
     else:
         print("Message not found.")
