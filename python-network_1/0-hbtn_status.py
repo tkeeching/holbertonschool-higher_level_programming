@@ -12,6 +12,7 @@ try:
         html = response.read()
         html_decoded = html.decode('utf8')
 
+        print('html:', html)
         print('html_decoded:', html_decoded)
 
         print('Body response:')
