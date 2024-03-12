@@ -12,6 +12,8 @@ try:
         html = response.read()
         html_decoded = html.decode('utf8')
 
+        print('html_decoded:', html_decoded)
+
         print('Body response:')
         print('         - type: {}'.format(type(html)))
 
@@ -23,7 +25,6 @@ try:
 
         if start_index != -1 and end_index != -1:
             message = html_decoded[start_index:end_index]
-            print('html_decoded:', html_decoded)
             print('         - content: {}'.format(message))
             print('         - utf8 content: {}'.format(message))
         else:
