@@ -13,7 +13,7 @@ with urllib.request.urlopen(req) as response:
     print('Body response:')
     print('         - type: {}'.format(type(html)))
 
-    start_index = html_decoded.find('OK')
+    start_index = html_decoded.find('OK') + len('OK')
 
     end_index = html_decoded.find('OK', start_index)
 
