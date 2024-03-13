@@ -12,7 +12,7 @@ try:
 
     with urllib.request.urlopen(req) as response:
         html = response.read()
-        print(html)
+        print(html.decode('utf8'))
 
 except IndexError as error:
     print('IndexError:', error)
