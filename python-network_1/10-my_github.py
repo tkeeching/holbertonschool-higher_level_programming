@@ -8,6 +8,6 @@ try:
         'https://api.github.com/users/{}'.format(sys.argv[1]),
         headers={'Authorization': 'Bearer {}'.format(sys.argv[2])})
     
-    print(response.text)
+    print(response.json()['id'])
 except IndexError as error:
     print(error)
