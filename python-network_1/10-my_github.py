@@ -4,7 +4,7 @@ import requests
 import sys
 
 try:
-    response = requests.post(
+    response = requests.get(
         'https://api.github.com/users/{}'.format(sys.argv[1]),
         headers={'Authorization': 'Bearer {}'.format(sys.argv[2])})
     
