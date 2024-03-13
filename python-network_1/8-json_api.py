@@ -9,7 +9,7 @@ try:
         data={'q': sys.argv[1] if len(sys.argv) > 0 else ''})
 
     try:
-        json = response.json
+        json = response.json()
         if (len(json) == 0):
             print('No result')
         else:
