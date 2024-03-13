@@ -13,6 +13,7 @@ try:
         if (len(json) == 0):
             print('No result')
         else:
+            print('json:', json)
             print('[{}] {}'.format(json['id'], json['name']))
     except ValueError as error:
         print('Not a valid JSON')
