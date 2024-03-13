@@ -5,6 +5,7 @@ import sys
 
 try:
     response = requests.get(sys.argv[1])
+    print(response.text)
 
 except IndexError as error:
     print('IndexError:', error)
