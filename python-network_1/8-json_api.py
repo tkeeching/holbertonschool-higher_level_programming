@@ -19,3 +19,6 @@ except IndexError as error:
 
 except ValueError as error:
     print('Not a valid JSON')
+
+except ConnectionRefusedError as error:
+    print('ConnectionRefusedError:', error)
