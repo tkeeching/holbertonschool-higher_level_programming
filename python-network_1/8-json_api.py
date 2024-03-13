@@ -5,7 +5,8 @@ import sys
 
 try:
     response = requests.post(
-        sys.argv[1], data={'q': sys.argv[2] if len(sys.argv) > 1 else ''})
+        'http://0.0.0.0:5000/search_user',
+        data={'q': sys.argv[1] if len(sys.argv) > 0 else ''})
 
     try:
         json = response.text
