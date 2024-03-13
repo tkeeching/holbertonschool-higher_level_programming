@@ -5,10 +5,11 @@ import sys
 
 try:
     response = requests.get(sys.argv[1])
-    print(response.text)
+
+    if (response.status_code >= 400):
+        print('Error code:', response.status_code)
+    else:
+        print(response.text)
 
 except IndexError as error:
     print('IndexError:', error)
-
-except requests.HTTPError as error:
-    print('Error code:', error.getcode())
