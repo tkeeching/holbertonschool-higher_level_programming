@@ -18,4 +18,4 @@ except IndexError as error:
     print('IndexError:', error)
 
 except urllib.error.HTTPError as error:
-    print('Error code:', error)
+    print('Error code:', error.getcode())
