@@ -2,19 +2,17 @@
 
 import requests
 import sys
-import json
 
 try:
     response = requests.post(
         sys.argv[1], data={'q': sys.argv[2] if len(sys.argv) > 1 else ''})
 
     try:
-        data = json.loads(response.text)
-
-        if (len(data) == 0):
+        json = response.text
+        if (len(json) == 0):
             print('No result')
         else:
-            print('[{}] {}'.format(data['id'], data['name']))
+            print('[{}] {}'.format(json['id'], json['name']))
     except ValueError as error:
         print('Not a valid JSON')
 
