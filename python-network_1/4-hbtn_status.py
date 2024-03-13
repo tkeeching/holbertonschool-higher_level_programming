@@ -5,5 +5,5 @@ import requests
 response = requests.get('https://intranet.hbtn.io/status')
 
 print('Body response:')
-print('{}{} {}'.format('\t', '- type:', type(response)))
-print('{}{} {}'.format('\t', '- content:', response.decode('utf8')))
+print('{}{} {}'.format('\t', '- type:', type(response.text)))
+print('{}{} {}'.format('\t', '- content:', response.text))
