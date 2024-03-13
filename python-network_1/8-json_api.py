@@ -4,9 +4,10 @@ import requests
 import sys
 
 try:
+    print(sys.argv)
     response = requests.post(
         'http://0.0.0.0:5000/search_user',
-        data={'q': sys.argv[1] if len(sys.argv) >= 1 else ''})
+        data={'q': sys.argv[1] if len(sys.argv) > 1 else ''})
 
     try:
         json = response.json()
