@@ -11,3 +11,6 @@ try:
     print(response.json()['id'])
 except IndexError as error:
     print(error)
+
+except KeyError as error:
+    print('None')
