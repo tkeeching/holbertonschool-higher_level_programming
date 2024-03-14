@@ -5,7 +5,8 @@
 import requests
 import sys
 
-payload = {'q': '' if len(sys.argv) == 1 else sys.argv[1]}
+input = '' if len(sys.argv) == 1 else sys.argv[1]
+payload = {'q': input}
 
 try:
     response = requests.post(
