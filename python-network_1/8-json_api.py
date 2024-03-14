@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+"""Takes in a letter and sends a POST request"""
+
 
 import requests
 import sys
