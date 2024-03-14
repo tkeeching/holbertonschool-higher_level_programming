@@ -5,10 +5,12 @@
 import requests
 import sys
 
+payload = {'q': '' if len(sys.argv) == 1 else sys.argv[1]}
+
 try:
     response = requests.post(
         'http://0.0.0.0:5000/search_user',
-        data={'q': '' if len(sys.argv) == 1 else sys.argv[1]})
+        data=payload)
 
     json = response.json()
     if (len(json) == 0):
