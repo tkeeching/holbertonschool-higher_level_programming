@@ -1,7 +1,3 @@
--- Command to compute the score average of all records
--- in the table 'second_table'
---
--- Requirements:
--- The result column name should be 'average'
+-- Command to remove all records with score <= 5 in the table 'second_table'
 
-SELECT AVG(score) AS average FROM second_table;
+DELETE FROM second_table WHERE score <= 5;
