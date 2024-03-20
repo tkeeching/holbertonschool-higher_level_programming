@@ -6,4 +6,4 @@
 -- Id the user 'user_0d_1' already exists, the script should not fail
 
 CREATE USER 'user_0d_1'@'localhost' IDENTIFIED BY 'user_0d_1_pwd';
-GRANT ALL ON hbtn_0c_0.* TO 'user_0d_1'@'localhost';
+GRANT ALL ON *.* TO 'user_0d_1'@'localhost';
