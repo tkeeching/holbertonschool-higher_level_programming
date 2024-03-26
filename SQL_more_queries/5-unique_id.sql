@@ -7,6 +7,6 @@
 -- If the table 'unique_id' already exists, the script should not fail
 
 CREATE TABLE IF NOT EXISTS unique_id (
-  id INT PRIMARY KEY,
+  id INT PRIMARY KEY DEFAULT 1,
   name VARCHAR(256)
 );
