@@ -5,4 +5,7 @@
 --    Results must be sorted in ascending order by 'cities.id'
 --    You are not allowed to use the 'JOIN' keyword
 
-SELECT * FROM cities WHERE states.name = 'California' ORDER BY cities.id ASC ;
+SELECT * FROM cities
+WHERE state_id IN 
+    (SELECT state_id FROM states WHERE name = 'California')
+ORDER BY cities.id ASC;
