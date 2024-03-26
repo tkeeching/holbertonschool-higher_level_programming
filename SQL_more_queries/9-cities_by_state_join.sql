@@ -5,6 +5,6 @@
 --    Results must be sorted in ascending order by 'cities.id'
 --    You are not allowed to use the 'JOIN' keyword
 
-SELECT cities.id, cities.name FROM cities
+SELECT cities.id, cities.name, states.name FROM cities
 JOIN states ON cities.state_id = states.id
 ORDER BY cities.id ASC;
