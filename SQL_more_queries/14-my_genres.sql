@@ -4,7 +4,6 @@
 --    The 'tv_shows' table contains only one record where 'title' = 'Dexter' (but the id can be different)
 --    Each record should display tv_genres.name
 --    Results must be sorted in ascending order by genre name
---    If a show doesn’t have a genre, display 'NULL'
 --    You can use only one 'SELECT' statement
 
 SELECT

@@ -6,7 +6,6 @@
 --    Second column must be called 'number_of_shows'
 --    Don’t display a genre that doesn’t have any shows linked
 --    Results must be sorted in descending order by the number of shows linked
---    If a show doesn’t have a genre, display 'NULL'
 --    You can use only one 'SELECT' statement
 
 SELECT
