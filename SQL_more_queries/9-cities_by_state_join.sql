@@ -3,7 +3,7 @@
 -- Requirements:
 --    Each record should display 'cities.id' - 'cities.name' - 'states.name'
 --    Results must be sorted in ascending order by 'cities.id'
---    You are not allowed to use the 'JOIN' keyword
+--    You can use only one 'SELECT' keyword
 
 SELECT cities.id, cities.name, states.name FROM cities
 JOIN states ON cities.state_id = states.id
