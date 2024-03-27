@@ -10,13 +10,11 @@
 --    You can use only one 'SELECT' statement
 
 SELECT
-    tv_show_genres.name AS genre,
-    tv_shows.genre_id,
-    @counter := IF(@prev_foreign_key = tv_shows.genre_id, @counter + 1, 1) AS accumulative_count,
-    @prev_foreign_key := tv_shows.genre_id
-FROM 
-    tv_show_genres 
-JOIN 
-    tv_shows ON tv_show_genres.show_id = tv_shows.id
-ORDER BY
-    genre, number_of_shows;
+    tv_genres.name AS genre,
+    COUNT(tv_show_genres.show_id) AS number_of_shows,
+FROM
+    tv_genres
+LEFT JOIN
+    tv_show_genres ON tv_genres.id = tv_show_genres.genre_id
+GROUP BY 
+    tv_genres.name, number_of_shows;
