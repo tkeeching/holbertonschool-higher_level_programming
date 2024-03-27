@@ -1,26 +1,24 @@
 #!/usr/bin/python3
-"""Takes in a letter and sends a POST request"""
-
-
-import requests
+"""
+script that takes in a letter and sends a POST request to
+http://0.0.0.0:5000/search_user with the letter as a parameter
+"""
 import sys
+import requests
 
-input = '' if len(sys.argv) == 1 else sys.argv[1]
-payload = {'q': input}
 
-try:
-    response = requests.post(
-        'http://0.0.0.0:5000/search_user',
-        data=payload)
+if __name__ == "__main__":
+    letter = "" if len(sys.argv) == 1 else sys.argv[1]
+    payload = {
+        "q": letter
+    }
 
-    json = response.json()
-    if (len(json) == 0):
-        print('No result')
-    else:
-        print('[{}] {}'.format(json['id'], json['name']))
-
-except IndexError as error:
-    print('IndexError:', error)
-
-except ValueError as error:
-    print('Not a valid JSON')
+    try:
+        r = requests.post("http://0.0.0.0:5000/search_user", data=payload)
+        response = r.json()
+        if response == {}:
+            print("No result")
+        else:
+            print(f"[{response.get('id')}] {response.get('name')}")
+    except ValueError:
+        print("Not a valid JSON")
