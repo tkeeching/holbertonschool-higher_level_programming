@@ -3,10 +3,17 @@
 import MySQLdb
 import sys
 
+
 def main():
     username, password, dbname = sys.argv[1:]
 
-    conn = MySQLdb.connect(host="localhost", port=3306, user=username, passwd=password, db=dbname, charset="utf8")
+    conn = MySQLdb.connect(
+        host="localhost",
+        port=3306,
+        user=username,
+        passwd=password,
+        db=dbname,
+        charset="utf8")
 
     cur = conn.cursor()
 
@@ -19,3 +26,7 @@ def main():
 
     cur.close()
     conn.close()
+
+
+if __name__ == "__main__":
+    main()
