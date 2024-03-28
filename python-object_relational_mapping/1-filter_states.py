@@ -25,7 +25,7 @@ def main():
         SELECT *
         FROM states
         WHERE UPPER(name) LIKE 'N%'
-        ORDER BY states.id ASS
+        ORDER BY states.id ASC
     """)
 
     query_rows = cur.fetchall()
