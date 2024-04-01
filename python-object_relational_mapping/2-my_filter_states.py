@@ -24,7 +24,7 @@ def main():
     cur.execute("""
         SELECT *
         FROM states
-        WHERE name = '{}' COLLATE NOCASE
+        WHERE name = '{}'
         ORDER BY states.id ASC
     """.format(state_name))
 
