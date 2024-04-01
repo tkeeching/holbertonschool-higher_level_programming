@@ -24,9 +24,9 @@ def main():
     cur.execute("""
         SELECT *
         FROM states
-        WHERE name=?
+        WHERE name={}
         ORDER BY states.id ASC
-    """, (state_name))
+    """.format(state_name))
 
     query_rows = cur.fetchall()
 
