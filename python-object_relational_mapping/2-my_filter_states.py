@@ -23,7 +23,7 @@ def main():
 
     cur.execute("""
         SELECT *
-        FROM hbtn_0e_0_usa.states
+        FROM states
         WHERE name = '{}'
         ORDER BY states.id ASC
     """.format(state_name))
