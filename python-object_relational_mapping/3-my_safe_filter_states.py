@@ -27,7 +27,7 @@ def main():
         FROM states
         WHERE name = BINARY ?
         ORDER BY states.id ASC
-    """, (state_name))
+    """, (state_name,))
 
     query_rows = cur.fetchall()
 
