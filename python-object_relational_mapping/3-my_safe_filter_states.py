@@ -25,7 +25,7 @@ def main():
     cur.execute("""
         SELECT *
         FROM states
-        WHERE name = BINARY ?
+        WHERE name = BINARY %s
         ORDER BY states.id ASC
     """, (state_name,))
 
