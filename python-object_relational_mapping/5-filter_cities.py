@@ -31,7 +31,8 @@ def main():
 
     query_rows = cur.fetchall()
 
-    result = [row[0] for row in query_rows]
+    city_names = [row[0] for row in query_rows]
+    result = ', '.join(city_names)
     print(result)
 
     cur.close()
