@@ -32,7 +32,7 @@ def main():
     query_rows = cur.fetchall()
 
     for row in query_rows:
-        print(row)
+        print(row[0])
 
     cur.close()
     conn.close()
