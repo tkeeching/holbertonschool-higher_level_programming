@@ -28,7 +28,7 @@ def list_states(username, password, db_name):
     if first_state:
         print("{}: {}".format(first_state.id, first_state.name))
     else:
-        print("Nothing.")
+        print("Nothing")
 
     # Close the session
     session.close()
