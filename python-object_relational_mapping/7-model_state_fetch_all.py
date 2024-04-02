@@ -8,6 +8,7 @@ import sys
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
+
 def list_states(username, password, db_name):
     """List all State objects from the database hbtn_0e_6_usa"""
     # Create the engine
