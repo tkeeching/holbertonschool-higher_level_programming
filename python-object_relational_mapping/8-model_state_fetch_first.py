@@ -22,11 +22,13 @@ def list_states(username, password, db_name):
     session = Session()
 
     # Query to get all State objects sorted by id
-    states = session.query(State).order_by(State.id).first()
+    first_state = session.query(State).order_by(State.id).first()
 
     # Display the results
-    for state in states:
-        print("{}: {}".format(state.id, state.name))
+    if first_state:
+        print("{}: {}".format(first_state.id, first_state.name))
+    else:
+        print("Nothing.")
 
     # Close the session
     session.close()
