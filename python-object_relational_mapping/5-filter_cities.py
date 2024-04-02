@@ -31,8 +31,8 @@ def main():
 
     query_rows = cur.fetchall()
 
-    for row in query_rows:
-        print(row[0])
+    result = [row[0] for row in query_rows]
+    print(result)
 
     cur.close()
     conn.close()
