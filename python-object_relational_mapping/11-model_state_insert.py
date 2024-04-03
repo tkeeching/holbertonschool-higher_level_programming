@@ -24,6 +24,7 @@ def add_state(username, password, db_name):
 
     # Create a new State object
     new_state = State(name='Louisiana')
+    print(new_state.id)
 
     # Add the new State object to the session
     session.add(new_state)
