@@ -24,9 +24,9 @@ def list_states(username, password, db_name, state_name):
 
     # Query to get all State objects sorted by id
     state = (session
-              .query(State)
-              .filter(State.name == state_name)
-              .order_by(State.id).first())
+             .query(State)
+             .filter(State.name == state_name)
+             .order_by(State.id).first())
 
     # Display the results
     if state:
