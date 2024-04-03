@@ -34,7 +34,7 @@ def add_state(username, password, db_name):
     # Ensure that the object has been committed and the id is populated
     session.refresh(new_state)
 
-    print(new_state.id)
+    print(new_state.name)
 
     # Close the session
     session.close()
