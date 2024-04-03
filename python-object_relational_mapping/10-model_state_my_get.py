@@ -26,7 +26,7 @@ def list_states(username, password, db_name, state_name):
     state = (session
               .query(State)
               .filter(State.name == state_name)
-              .order_by(State.id).all())
+              .order_by(State.id).first())
 
     # Display the results
     if state:
