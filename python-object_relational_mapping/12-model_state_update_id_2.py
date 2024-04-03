@@ -11,7 +11,7 @@ from sqlalchemy.orm import sessionmaker
 
 
 def add_state(username, password, db_name):
-    """Add the State object "Louisiana" to the database"""
+    """Update the State object with id = 2"""
     # Create the engine
     engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'.
                            format(username, password, db_name))
@@ -28,7 +28,7 @@ def add_state(username, password, db_name):
     # Check if the state object exists
     if state_to_update:
         # Update the name attribute
-        state_to_update.name = New Mexico
+        state_to_update.name = 'New Mexico'
 
         # Commit the session to save the changes to the database
         session.commit()
