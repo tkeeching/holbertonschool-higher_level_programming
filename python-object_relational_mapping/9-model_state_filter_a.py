@@ -23,7 +23,10 @@ def list_states(username, password, db_name):
     session = Session()
 
     # Query to get all State objects sorted by id
-    states = session.query(State).filter(State.name.like('%a%')).order_by(State.id).all()
+    states = (session
+              .query(State)
+              .filter(State.name.like('%a%'))
+              .order_by(State.id).all())
 
     # Display the results
     for state in states:
