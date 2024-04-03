@@ -30,7 +30,7 @@ def list_states(username, password, db_name, state_name):
 
     # Display the results
     for state in states:
-        print("{}: {}".format(state.id, state.name))
+        print(state.id)
 
     # Close the session
     session.close()
