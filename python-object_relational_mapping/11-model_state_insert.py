@@ -10,8 +10,8 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
 
-def list_states(username, password, db_name):
-    """List all State objects from the database hbtn_0e_6_usa"""
+def add_state(username, password, db_name):
+    """Add the State object "Louisiana" to the database"""
     # Create the engine
     engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'.
                            format(username, password, db_name))
@@ -31,6 +31,9 @@ def list_states(username, password, db_name):
     # Commit the session to save the changes to the database
     session.commit()
 
+    # Ensure that the object has been committed and the id is populated
+    session.refresh(new_state)
+
     print(new_state.id)
 
     # Close the session
@@ -40,4 +43,4 @@ def list_states(username, password, db_name):
 if __name__ == "__main__":
     username, password, db_name, state_name = sys.argv[1:]
 
-    list_states(username, password, db_name)
+    add_state(username, password, db_name)
