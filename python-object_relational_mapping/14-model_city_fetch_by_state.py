@@ -27,7 +27,11 @@ def list_cities(username, password, db_name):
 
     # Display the results
     for city in cities:
-        state_name = session.query(State).filter_by(id=city.state_id).first().name
+        state_name = (session
+                      .query(State)
+                      .filter_by(id=city.state_id)
+                      .first()
+                      .name)
         print("{}: ({}) {}".format(state_name, city.id, city.name))
 
     # Close the session
