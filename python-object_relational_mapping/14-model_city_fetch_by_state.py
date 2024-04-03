@@ -4,14 +4,14 @@ Script that prints all 'City' objects from the database 'hbtn_0e_6_usa'
 """
 
 from model_state import State
-from model_state import City
+from model_city import City
 import sys
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
 
-def list_states(username, password, db_name):
-    """List all State objects from the database hbtn_0e_6_usa"""
+def list_cities(username, password, db_name):
+    """List all City objects from the database hbtn_0e_6_usa"""
     # Create the engine
     engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'.
                            format(username, password, db_name))
@@ -37,4 +37,4 @@ def list_states(username, password, db_name):
 if __name__ == "__main__":
     username, password, db_name = sys.argv[1:]
 
-    list_states(username, password, db_name)
+    list_cities(username, password, db_name)
