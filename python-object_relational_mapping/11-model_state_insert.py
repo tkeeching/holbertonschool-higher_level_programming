@@ -24,7 +24,6 @@ def add_state(username, password, db_name):
 
     # Create a new State object
     new_state = State(name='Louisiana')
-    print(new_state.id)
 
     # Add the new State object to the session
     session.add(new_state)
@@ -35,13 +34,13 @@ def add_state(username, password, db_name):
     # Ensure that the object has been committed and the id is populated
     session.refresh(new_state)
 
-    print(new_state.name)
+    print(new_state.id)
 
     # Close the session
     session.close()
 
 
 if __name__ == "__main__":
-    username, password, db_name, state_name = sys.argv[1:]
+    username, password, db_name = sys.argv[1:]
 
     add_state(username, password, db_name)
